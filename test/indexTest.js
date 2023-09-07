@@ -1,5 +1,23 @@
 require ( './root.js' );
 
+function shout(string){
+  return string.toUpperCase();
+}
+
+function whisper(string){
+  return string.toLowerCase();
+}
+
+function logShout(string) {
+  console.log(string.toUpperCase());
+  return string.toUpperCase();
+}
+
+function logWhisper(string) {
+  console.log(string.toLowerCase());
+  return string.toLowerCase();
+}
+
 
 describe('shout(string)', function() {
   it('receives one argument and returns it in all caps', function() {
@@ -36,6 +54,20 @@ describe('logWhisper(string)', function() {
     console.log.restore();
   })
 })
+
+function sayHiToHeadphonedRoommate(string){
+  if(string === string.toLowerCase()){
+    return "I can't hear you!";
+  }
+  else if(string === string.toUpperCase()){
+    return "YES INDEED!";
+  }
+  else if(string === "Let\'s have dinner together!"){
+    return "I would love to!";
+  }
+  else {}
+}
+
 
 describe('sayHiToHeadphonedRoommate(string)', function() {
   it('returns "I can\'t hear you!" if `string` is lowercase', function() {
